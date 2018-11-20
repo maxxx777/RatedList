@@ -14,6 +14,7 @@
 		754E7C8621A4AD09007DEEDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754E7C8421A4AD09007DEEDA /* LaunchScreen.storyboard */; };
 		754E7C9121A4AD09007DEEDA /* RatedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7C9021A4AD09007DEEDA /* RatedListTests.swift */; };
 		754E7C9C21A4AD09007DEEDA /* RatedListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7C9B21A4AD09007DEEDA /* RatedListUITests.swift */; };
+		754E7CAD21A4AD9D007DEEDA /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 754E7CAC21A4AD9D007DEEDA /* list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		754E7C9721A4AD09007DEEDA /* RatedListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatedListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		754E7C9B21A4AD09007DEEDA /* RatedListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatedListUITests.swift; sourceTree = "<group>"; };
 		754E7C9D21A4AD09007DEEDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754E7CAC21A4AD9D007DEEDA /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				754E7C8221A4AD09007DEEDA /* Assets.xcassets */,
 				754E7C8421A4AD09007DEEDA /* LaunchScreen.storyboard */,
 				754E7C8721A4AD09007DEEDA /* Info.plist */,
+				754E7CAB21A4AD9D007DEEDA /* Resources */,
 			);
 			path = RatedList;
 			sourceTree = "<group>";
@@ -123,6 +126,14 @@
 				754E7C9D21A4AD09007DEEDA /* Info.plist */,
 			);
 			path = RatedListUITests;
+			sourceTree = "<group>";
+		};
+		754E7CAB21A4AD9D007DEEDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				754E7CAC21A4AD9D007DEEDA /* list.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				754E7C8621A4AD09007DEEDA /* LaunchScreen.storyboard in Resources */,
+				754E7CAD21A4AD9D007DEEDA /* list.json in Resources */,
 				754E7C8321A4AD09007DEEDA /* Assets.xcassets in Resources */,
 				754E7C8121A4AD06007DEEDA /* Main.storyboard in Resources */,
 			);
