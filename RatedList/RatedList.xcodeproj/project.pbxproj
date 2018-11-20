@@ -18,6 +18,7 @@
 		754E7CB321A4B0FD007DEEDA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CB221A4B0FD007DEEDA /* Item.swift */; };
 		754E7CB521A4B370007DEEDA /* ListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CB421A4B370007DEEDA /* ListServiceTests.swift */; };
 		754E7CB921A4B844007DEEDA /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CB821A4B843007DEEDA /* ItemListViewModel.swift */; };
+		754E7CBB21A4BA01007DEEDA /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CBA21A4BA01007DEEDA /* ItemCellViewModel.swift */; };
 		754E7CBD21A4BBB1007DEEDA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		754E7CB221A4B0FD007DEEDA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		754E7CB421A4B370007DEEDA /* ListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceTests.swift; sourceTree = "<group>"; };
 		754E7CB821A4B843007DEEDA /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		754E7CBA21A4BA01007DEEDA /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
 		754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				754E7CB821A4B843007DEEDA /* ItemListViewModel.swift */,
+				754E7CBA21A4BA01007DEEDA /* ItemCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				754E7CB921A4B844007DEEDA /* ItemListViewModel.swift in Sources */,
 				754E7C7E21A4AD06007DEEDA /* ViewController.swift in Sources */,
 				754E7C7C21A4AD06007DEEDA /* AppDelegate.swift in Sources */,
+				754E7CBB21A4BA01007DEEDA /* ItemCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
