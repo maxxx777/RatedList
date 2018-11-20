@@ -11,22 +11,28 @@ import Foundation
 protocol ItemListViewModel {
     
     func fetchItems(with completion: @escaping (Bool) -> Void)
+    func numberOfItems() -> Int
+    func cellViewModel(at index: Int) -> ItemCellViewModel?
 }
 
-struct ItemListViewModelImp: ItemListViewModel {
+class ItemListViewModelImp {
     
     private let listService: ListService
+    private var cellViewModels: [ItemCellViewModelImp]?
     
     init(listService: ListService) {
         
         self.listService = listService
     }
+}
+
+extension ItemListViewModelImp: ItemListViewModel {
     
     func fetchItems(with completion: @escaping (Bool) -> Void) {
         
-        listService.fetchItems { (items) in
+        listService.fetchItems { [weak self] (items) in
             
-            guard let _ = items else {
+            guard let items = items else {
                 
                 DispatchQueue.main.async {
                     completion(false)
@@ -35,9 +41,23 @@ struct ItemListViewModelImp: ItemListViewModel {
                 return
             }
             
+            self?.cellViewModels = items.map {
+                ItemCellViewModelImp(item: $0)
+            }
+            
             DispatchQueue.main.async {
                 completion(true)
             }
         }
+    }
+    
+    func numberOfItems() -> Int {
+        
+        return cellViewModels?.count ?? 0
+    }
+    
+    func cellViewModel(at index: Int) -> ItemCellViewModel? {
+        
+        return cellViewModels?[index]
     }
 }
