@@ -20,6 +20,7 @@
 		754E7CB921A4B844007DEEDA /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CB821A4B843007DEEDA /* ItemListViewModel.swift */; };
 		754E7CBB21A4BA01007DEEDA /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CBA21A4BA01007DEEDA /* ItemCellViewModel.swift */; };
 		754E7CBD21A4BBB1007DEEDA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */; };
+		754E7CCC21A4C7FA007DEEDA /* ItemCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CCB21A4C7FA007DEEDA /* ItemCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		754E7CB821A4B843007DEEDA /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		754E7CBA21A4BA01007DEEDA /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
 		754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
+		754E7CCB21A4C7FA007DEEDA /* ItemCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		754E7C8F21A4AD09007DEEDA /* RatedListTests */ = {
 			isa = PBXGroup;
 			children = (
+				754E7CCB21A4C7FA007DEEDA /* ItemCellViewModelTests.swift */,
 				754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */,
 				754E7CB421A4B370007DEEDA /* ListServiceTests.swift */,
 				754E7C9221A4AD09007DEEDA /* Info.plist */,
@@ -322,6 +325,7 @@
 			files = (
 				754E7CBD21A4BBB1007DEEDA /* ItemListViewModelTests.swift in Sources */,
 				754E7CB521A4B370007DEEDA /* ListServiceTests.swift in Sources */,
+				754E7CCC21A4C7FA007DEEDA /* ItemCellViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

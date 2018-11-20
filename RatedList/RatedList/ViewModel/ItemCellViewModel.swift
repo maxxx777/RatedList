@@ -10,13 +10,21 @@ import Foundation
 
 protocol ItemCellViewModel {
     
+    var title: String {get}
 }
 
-struct ItemCellViewModelImp: ItemCellViewModel {
+struct ItemCellViewModelImp {
     
     private let item: Item
     
     init(item: Item) {
         self.item = item
+    }
+}
+
+extension ItemCellViewModelImp: ItemCellViewModel {
+    
+    var title: String {
+        return item.name
     }
 }
