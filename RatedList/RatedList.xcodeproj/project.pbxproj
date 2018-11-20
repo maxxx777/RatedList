@@ -21,6 +21,8 @@
 		754E7CBD21A4BBB1007DEEDA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */; };
 		754E7CC321A4C3AD007DEEDA /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CC221A4C3AC007DEEDA /* ItemListViewController.swift */; };
 		754E7CC521A4C40D007DEEDA /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CC421A4C40D007DEEDA /* ItemTableViewCell.swift */; };
+		754E7CC821A4C67F007DEEDA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CC721A4C67F007DEEDA /* AppCoordinator.swift */; };
+		754E7CCA21A4C68A007DEEDA /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CC921A4C68A007DEEDA /* AppFactory.swift */; };
 		754E7CCC21A4C7FA007DEEDA /* ItemCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E7CCB21A4C7FA007DEEDA /* ItemCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		754E7CBC21A4BBB1007DEEDA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 		754E7CC221A4C3AC007DEEDA /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		754E7CC421A4C40D007DEEDA /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		754E7CC721A4C67F007DEEDA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		754E7CC921A4C68A007DEEDA /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		754E7CCB21A4C7FA007DEEDA /* ItemCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,7 @@
 				754E7C8221A4AD09007DEEDA /* Assets.xcassets */,
 				754E7C8421A4AD09007DEEDA /* LaunchScreen.storyboard */,
 				754E7C8721A4AD09007DEEDA /* Info.plist */,
+				754E7CC621A4C652007DEEDA /* Coordinator */,
 				754E7CB121A4B0D9007DEEDA /* Model */,
 				754E7CAB21A4AD9D007DEEDA /* Resources */,
 				754E7CAE21A4B0B4007DEEDA /* Services */,
@@ -187,6 +192,15 @@
 				754E7CC421A4C40D007DEEDA /* ItemTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		754E7CC621A4C652007DEEDA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				754E7CC721A4C67F007DEEDA /* AppCoordinator.swift */,
+				754E7CC921A4C68A007DEEDA /* AppFactory.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,10 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754E7CCA21A4C68A007DEEDA /* AppFactory.swift in Sources */,
 				754E7CB321A4B0FD007DEEDA /* Item.swift in Sources */,
 				754E7CB021A4B0C8007DEEDA /* ListService.swift in Sources */,
 				754E7CB921A4B844007DEEDA /* ItemListViewModel.swift in Sources */,
 				754E7C7C21A4AD06007DEEDA /* AppDelegate.swift in Sources */,
+				754E7CC821A4C67F007DEEDA /* AppCoordinator.swift in Sources */,
 				754E7CBB21A4BA01007DEEDA /* ItemCellViewModel.swift in Sources */,
 				754E7CC521A4C40D007DEEDA /* ItemTableViewCell.swift in Sources */,
 				754E7CC321A4C3AD007DEEDA /* ItemListViewController.swift in Sources */,
