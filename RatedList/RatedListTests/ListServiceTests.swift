@@ -27,4 +27,6 @@ class ListServiceTests: XCTestCase {
         
         wait(for: [exp], timeout: 0.1)
     }
+    
+    //TODO: failure case should be tested as well
 }
