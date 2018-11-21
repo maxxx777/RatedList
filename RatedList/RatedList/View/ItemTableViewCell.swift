@@ -13,6 +13,7 @@ class ItemTableViewCell: UITableViewCell {
     var viewModel: ItemCellViewModel? {
         didSet {
             self.textLabel?.text = viewModel?.title
+            self.detailTextLabel?.text = viewModel?.ratingText
         }
     }
 }
