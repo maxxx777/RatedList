@@ -70,4 +70,22 @@ class ItemListViewModelTests: XCTestCase {
         
         wait(for: [exp], timeout: 0.1)
     }
+    
+    func testViewModelUpdateRatingOfItemCorrectly() {
+        
+        //Given
+        let exp = expectation(description: "view model fetches items")
+        
+        //When
+        viewModel.fetchItems { result in
+            //Then
+            self.viewModel.update(ratingValue: 4, for: 2, with: { newIndex in
+                XCTAssertNotNil(newIndex, "View Model does not return new index of item")
+                XCTAssertEqual(newIndex!, 17, "View Model returns wrong new index of item")
+                exp.fulfill()
+            })
+        }
+        
+        wait(for: [exp], timeout: 0.1)
+    }
 }
