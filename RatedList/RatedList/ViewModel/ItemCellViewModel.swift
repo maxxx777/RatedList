@@ -16,6 +16,7 @@ protocol ItemCellViewModel {
 struct ItemCellViewModelImp {
     
     let item: Item
+    var rating = 0
     
     init(item: Item) {
         self.item = item
