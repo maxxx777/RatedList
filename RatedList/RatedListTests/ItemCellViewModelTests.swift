@@ -23,4 +23,18 @@ class ItemCellViewModelTests: XCTestCase {
         //Then
         XCTAssertEqual(cellViewModel.title, "test name", "Cell view model returns wrong title")
     }
+    
+    func testCellViewModelReturnsRatingTextCorrectly() {
+        
+        //Given
+        let item = Item(itemId: 1,
+                        name: "test name")
+        var cellViewModel = ItemCellViewModelImp(item: item)
+        
+        //When
+        cellViewModel.rating = 5
+        
+        //Then
+        XCTAssertEqual(cellViewModel.ratingText, "5", "Cell view model returns wrong title")
+    }
 }
