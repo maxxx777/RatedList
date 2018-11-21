@@ -18,7 +18,7 @@ protocol ItemListViewModel {
 class ItemListViewModelImp {
     
     private let listService: ListService
-    private var cellViewModels: [ItemCellViewModelImp]?
+    private var cellViewModels: [ItemCellViewModelImp] = []
     
     init(listService: ListService) {
         
@@ -53,11 +53,12 @@ extension ItemListViewModelImp: ItemListViewModel {
     
     func numberOfItems() -> Int {
         
-        return cellViewModels?.count ?? 0
+        return cellViewModels.count
     }
     
     func cellViewModel(at index: Int) -> ItemCellViewModel? {
         
-        return cellViewModels?[index]
+        return cellViewModels[index]
+    }
     }
 }
