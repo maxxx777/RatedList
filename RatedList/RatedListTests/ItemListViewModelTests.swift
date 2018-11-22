@@ -79,9 +79,9 @@ class ItemListViewModelTests: XCTestCase {
         //When
         viewModel.fetchItems { result in
             //Then
-            self.viewModel.update(ratingValue: 4, for: 2, with: { newIndex in
+            self.viewModel.update(ratingValue: 4, at: 3, with: { newIndex in
                 XCTAssertNotNil(newIndex, "View Model does not return new index of item")
-                XCTAssertEqual(newIndex!, 17, "View Model returns wrong new index of item")
+                XCTAssertEqual(newIndex, 0, "View Model returns wrong new index of item")
                 exp.fulfill()
             })
         }

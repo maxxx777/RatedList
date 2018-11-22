@@ -13,7 +13,7 @@ protocol ItemListViewModel {
     func fetchItems(with completion: @escaping (Bool) -> Void)
     func numberOfItems() -> Int
     func cellViewModel(at index: Int) -> ItemCellViewModel?
-    func update(ratingValue: Int, for itemId:Int, with completion: @escaping (Int?) -> Void)
+    func update(ratingValue: Int, at index: Int, with completion: @escaping (Int) -> Void)
 }
 
 class ItemListViewModelImp {
@@ -63,28 +63,17 @@ extension ItemListViewModelImp: ItemListViewModel {
     }
     
     func update(ratingValue: Int,
-                for itemId: Int,
-                with completion: @escaping (Int?) -> Void) {
+                at index: Int,
+                with completion: @escaping (Int) -> Void) {
         
-        let currentIndex = cellViewModels.lastIndex { (cellViewModel) -> Bool in
-            return cellViewModel.item.itemId == itemId
-        }
+        var cellViewModel = cellViewModels.remove(at: index)
         
-        guard let _ = currentIndex else {
-            completion(nil)
-            return
-        }
+        var newIndex = cellViewModels.firstIndex { $0.rating < ratingValue }
+        newIndex = newIndex ?? index
         
-        var newIndex = cellViewModels.lastIndex { (cellViewModel) -> Bool in
-            return cellViewModel.rating < ratingValue
-        }
-        
-        newIndex = newIndex ?? 0
-        
-        var cellViewModel = cellViewModels.remove(at: currentIndex!)
         cellViewModel.rating = ratingValue
         cellViewModels.insert(cellViewModel, at: newIndex!)
         
-        completion(newIndex)
+        completion(newIndex!)
     }
 }
