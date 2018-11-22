@@ -51,6 +51,18 @@ fileprivate extension ItemListViewController {
         
         tableView?.reloadData()
     }
+    
+    func reorderItems(between index1: Int, and index2: Int) {
+        var indexPaths:[IndexPath] = []
+        if index1 > index2 {
+            indexPaths = (index2...index1).map{ IndexPath(row: $0, section: 0) }
+        } else if index1 < index2 {
+            indexPaths = (index1...index2).map{ IndexPath(row: $0, section: 0) }
+        } else {
+            indexPaths = [IndexPath(row: index1, section: 0)]
+        }        
+        tableView?.reloadRows(at: indexPaths, with: .automatic)        
+    }
 }
 
 extension ItemListViewController: UITableViewDelegate {
