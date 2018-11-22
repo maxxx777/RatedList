@@ -11,7 +11,7 @@ import Foundation
 protocol ItemCellViewModel {
     
     var title: String {get}
-    var ratingText: String {get}
+    var ratingValue: Int {get}
 }
 
 struct ItemCellViewModelImp {
@@ -30,7 +30,7 @@ extension ItemCellViewModelImp: ItemCellViewModel {
         return item.name
     }
     
-    var ratingText: String {        
-        return "\(rating)"
+    var ratingValue: Int {
+        return rating
     }
 }

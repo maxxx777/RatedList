@@ -35,6 +35,6 @@ class ItemCellViewModelTests: XCTestCase {
         cellViewModel.rating = 5
         
         //Then
-        XCTAssertEqual(cellViewModel.ratingText, "5", "Cell view model returns wrong title")
+        XCTAssertEqual(cellViewModel.ratingValue, 5, "Cell view model returns wrong rating value")
     }
 }

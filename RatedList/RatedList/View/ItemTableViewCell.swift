@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Cosmos
 
 class ItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ratingView: CosmosView?
+    
     var viewModel: ItemCellViewModel? {
         didSet {
-            self.textLabel?.text = viewModel?.title
-            self.detailTextLabel?.text = viewModel?.ratingText
+            self.textLabel?.text = viewModel?.title            
+            self.ratingView?.rating = Double(viewModel?.ratingValue ?? 0)
         }
     }
 }
