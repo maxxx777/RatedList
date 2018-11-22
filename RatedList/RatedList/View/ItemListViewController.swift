@@ -85,6 +85,11 @@ extension ItemListViewController: UITableViewDataSource {
         let cellViewModel = viewModel.cellViewModel(at: indexPath.item)
         
         cell.viewModel = cellViewModel
+        cell.ratingView?.didFinishTouchingCosmos = { [weak self] rating in
+            self?.viewModel.update(ratingValue: Int(rating), at: indexPath.row, with: { [weak self] newRow in
+                self?.reorderItems(between: indexPath.row, and: newRow)                       
+            })
+        }
         
         return cell
     }
